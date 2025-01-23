@@ -1,6 +1,117 @@
 {
   "homepage": {
-    "greeting": "Salut, {name}!",
+    "greeting": "Bonjour, {name}!",
     "welcome": "Bienvenue sur notre plateforme"
+  },
+  "ui": {
+    "theme": {
+      "toggle_theme": "Changer le thème",
+      "light": "Clair",
+      "dark": "Sombre",
+      "system": "Système"
+    },
+    "header": {
+      "home": "Accueil",
+      "shop": "Boutique",
+      "categories": "Catégories",
+      "about": "À propos",
+      "contact": "Contact",
+      "new_arrivals": "Nouveautés",
+      "best_sellers": "Meilleures ventes",
+      "sale": "Promotion",
+      "all_products": "Tous les produits",
+      "electronics": "Électronique",
+      "clothing": "Vêtements",
+      "home_garden": "Maison & Jardin",
+      "books": "Livres",
+      "explore_products": "Découvrez notre large gamme de produits",
+      "browse_categories": "Parcourir les produits par catégorie",
+      "search": "Rechercher",
+      "login": "Connexion",
+      "logout": "Déconnexion",
+      "welcome": "Bienvenue, {username}",
+      "cart": "Panier ({count})",
+      "get_started": "Commencer",
+      "view_all": "Voir tous les {title}",
+      "book_demo": "Réserver une démo"
+    },
+    "authLayout": {
+      "back_to_home": "Retour à l'accueil",
+      "welcome": "Bienvenue chez Commerce",
+      "all_rights": "Tous droits réservés."
+    }
+  },
+  "auth": {
+    "signup": {
+      "username": "Nom d'utilisateur",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "confirm_password": "Confirmer le mot de passe",
+      "signup_button": "S'inscrire",
+      "google_signup": "S'inscrire avec Google",
+      "already_have_account": "Vous avez déjà un compte?",
+      "signin": "Se connecter",
+      "placeholder_username": "Jean Dupont",
+      "placeholder_email": "exemple@votreentreprise.com",
+      "placeholder_password": "Confirmez votre mot de passe",
+      "validation": {
+        "username_min": "Le nom doit contenir au moins 2 caractères",
+        "invalid_email": "Adresse e-mail invalide",
+        "password_min": "Le mot de passe doit contenir au moins 12 caractères",
+        "password_number": "Le mot de passe doit contenir au moins 1 chiffre",
+        "password_lowercase": "Le mot de passe doit contenir au moins 1 lettre minuscule",
+        "password_uppercase": "Le mot de passe doit contenir au moins 1 lettre majuscule",
+        "password_special": "Le mot de passe doit contenir au moins 1 caractère spécial",
+        "password_mismatch": "Les mots de passe ne correspondent pas"
+      },
+      "or_continue_with": "Ou continuer avec"
+    },
+    "login": {
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "login_button": "Se connecter",
+      "forgot_password": "Mot de passe oublié?",
+      "or_continue_with": "Ou continuer avec",
+      "google_login": "Se connecter avec Google",
+      "no_account": "Vous n'avez pas de compte?",
+      "signup": "S'inscrire",
+      "placeholder_email": "exemple@votreentreprise.com",
+      "placeholder_password": "Entrez votre mot de passe",
+      "validation": {
+        "invalid_email": "Adresse e-mail invalide",
+        "password_required": "Le mot de passe est requis"
+      }
+    },
+    "passwordChange": {
+      "title": "Changer le mot de passe",
+      "currentPassword": "Mot de passe actuel",
+      "newPassword": "Nouveau mot de passe",
+      "confirmNewPassword": "Confirmer le nouveau mot de passe",
+      "changePasswordButton": "Changer le mot de passe",
+      "placeholder_currentPassword": "Entrez le mot de passe actuel",
+      "placeholder_newPassword": "Entrez un nouveau mot de passe",
+      "placeholder_confirmNewPassword": "Confirmez le nouveau mot de passe",
+      "validation": {
+        "currentPassword_required": "Le mot de passe actuel est requis",
+        "newPassword_min": "Le mot de passe doit contenir au moins 12 caractères",
+        "newPassword_number": "Le mot de passe doit contenir au moins 1 chiffre",
+        "newPassword_lowercase": "Le mot de passe doit contenir au moins 1 lettre minuscule",
+        "newPassword_uppercase": "Le mot de passe doit contenir au moins 1 lettre majuscule",
+        "newPassword_special": "Le mot de passe doit contenir au moins 1 caractère spécial",
+        "password_mismatch": "Les mots de passe ne correspondent pas"
+      }
+    },
+    "passwordReset": {
+      "title": "Réinitialiser le mot de passe",
+      "email": "E-mail",
+      "sendResetLink": "Envoyer le lien de réinitialisation",
+      "placeholder_email": "exemple@votreentreprise.com",
+      "email_sent_title": "Vérifiez votre e-mail",
+      "email_sent_message": "Nous avons envoyé un lien de réinitialisation de mot de passe à votre e-mail. Veuillez vérifier votre boîte de réception et suivre les instructions.",
+      "send_again": "Renvoyer",
+      "validation": {
+        "invalid_email": "Adresse e-mail invalide"
+      }
+    }
   }
 }

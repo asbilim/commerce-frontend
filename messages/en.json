@@ -2,5 +2,116 @@
   "homepage": {
     "greeting": "Hello, {name}!",
     "welcome": "Welcome to our platform"
+  },
+  "ui": {
+    "theme": {
+      "toggle_theme": "Toggle theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "authLayout": {
+      "back_to_home": "Back to Home",
+      "welcome": "Welcome to Commerce",
+      "all_rights": "All rights reserved."
+    },
+    "header": {
+      "home": "Home",
+      "shop": "Shop",
+      "categories": "Categories",
+      "about": "About",
+      "contact": "Contact",
+      "new_arrivals": "New Arrivals",
+      "best_sellers": "Best Sellers",
+      "sale": "Sale",
+      "all_products": "All Products",
+      "electronics": "Electronics",
+      "clothing": "Clothing",
+      "home_garden": "Home & Garden",
+      "books": "Books",
+      "explore_products": "Explore our wide range of products",
+      "browse_categories": "Browse products by category",
+      "search": "Search",
+      "login": "Login",
+      "logout": "Logout",
+      "welcome": "Welcome, {username}",
+      "cart": "Cart ({count})",
+      "get_started": "Get Started",
+      "view_all": "View All {title}",
+      "book_demo": "Book a demo"
+    }
+  },
+  "auth": {
+    "signup": {
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "signup_button": "Sign up",
+      "google_signup": "Sign up with Google",
+      "already_have_account": "Already have an account?",
+      "signin": "Sign in",
+      "placeholder_username": "Matt Welsh",
+      "placeholder_email": "hi@yourcompany.com",
+      "placeholder_password": "Confirm your password",
+      "validation": {
+        "username_min": "Name must be at least 2 characters",
+        "invalid_email": "Invalid email address",
+        "password_min": "Password must be at least 12 characters",
+        "password_number": "Password must contain at least 1 number",
+        "password_lowercase": "Password must contain at least 1 lowercase letter",
+        "password_uppercase": "Password must contain at least 1 uppercase letter",
+        "password_special": "Password must contain at least 1 special character",
+        "password_mismatch": "Passwords don't match"
+      },
+      "or_continue_with": "Or continue with"
+    },
+    "login": {
+      "email": "Email",
+      "password": "Password",
+      "login_button": "Log In",
+      "forgot_password": "Forgot password?",
+      "or_continue_with": "Or continue with",
+      "google_login": "Log in with Google",
+      "no_account": "Don't have an account?",
+      "signup": "Sign up",
+      "placeholder_email": "hi@yourcompany.com",
+      "placeholder_password": "Enter your password",
+      "validation": {
+        "invalid_email": "Invalid email address",
+        "password_required": "Password is required"
+      }
+    },
+    "passwordChange": {
+      "title": "Change Password",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmNewPassword": "Confirm New Password",
+      "changePasswordButton": "Change Password",
+      "placeholder_currentPassword": "Enter current password",
+      "placeholder_newPassword": "Enter new password",
+      "placeholder_confirmNewPassword": "Confirm new password",
+      "validation": {
+        "currentPassword_required": "Current password is required",
+        "newPassword_min": "Password must be at least 12 characters",
+        "newPassword_number": "Password must contain at least 1 number",
+        "newPassword_lowercase": "Password must contain at least 1 lowercase letter",
+        "newPassword_uppercase": "Password must contain at least 1 uppercase letter",
+        "newPassword_special": "Password must contain at least 1 special character",
+        "password_mismatch": "Passwords don't match"
+      }
+    },
+    "passwordReset": {
+      "title": "Reset Password",
+      "email": "Email",
+      "sendResetLink": "Send Reset Link",
+      "placeholder_email": "hi@yourcompany.com",
+      "email_sent_title": "Check Your Email",
+      "email_sent_message": "We've sent a password reset link to your email. Please check your inbox and follow the instructions.",
+      "send_again": "Send Again",
+      "validation": {
+        "invalid_email": "Invalid email address"
+      }
+    }
   }
 }
