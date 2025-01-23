@@ -34,6 +34,11 @@
       "get_started": "Commencer",
       "view_all": "Voir tous les {title}",
       "book_demo": "Réserver une démo"
+    },
+    "authLayout": {
+      "back_to_home": "Retour à l'accueil",
+      "welcome": "Bienvenue chez Commerce",
+      "all_rights": "Tous droits réservés."
     }
   },
   "auth": {

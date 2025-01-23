@@ -10,6 +10,11 @@
       "dark": "Dark",
       "system": "System"
     },
+    "authLayout": {
+      "back_to_home": "Back to Home",
+      "welcome": "Welcome to Commerce",
+      "all_rights": "All rights reserved."
+    },
     "header": {
       "home": "Home",
       "shop": "Shop",
