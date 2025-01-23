@@ -5,7 +5,7 @@ import { ChevronLeft } from "lucide-react";
 
 export default function AuthLayout({ children }) {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 relative">
+    <div className="min-h-screen relative top-0 flex flex-col items-center justify-center p-4 w-full ">
       <Link
         href="/"
         className="absolute top-4 left-4 flex items-center text-sm text-gray-600 hover:text-gray-900 transition-colors">
