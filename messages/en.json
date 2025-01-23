@@ -1,0 +1,6 @@
+{
+  "homepage": {
+    "greeting": "Hello, {name}!",
+    "welcome": "Welcome to our platform"
+  }
+}
