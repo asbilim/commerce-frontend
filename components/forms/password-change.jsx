@@ -6,7 +6,7 @@ import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { PasswordInput } from "@/components/ui/password-input";
 import { Label } from "@/components/ui/label";
-import { useTranslations } from "next-intl"; 
+import { useTranslations } from "next-intl";
 
 const passwordChangeSchema = z
   .object({
@@ -51,7 +51,7 @@ function PasswordChangeForm() {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-6 bg-white dark:bg-zinc-900 rounded-xl shadow-lg space-y-6">
+    <div className="w-full max-w-md mx-auto p-6 rounded-xl space-y-6">
       <h2 className="text-xl font-semibold text-center">
         {t("passwordChange.title") || "Change Password"}
       </h2>

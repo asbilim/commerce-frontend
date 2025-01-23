@@ -3,6 +3,39 @@
     "greeting": "Hello, {name}!",
     "welcome": "Welcome to our platform"
   },
+  "ui": {
+    "theme": {
+      "toggle_theme": "Toggle theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "header": {
+      "home": "Home",
+      "shop": "Shop",
+      "categories": "Categories",
+      "about": "About",
+      "contact": "Contact",
+      "new_arrivals": "New Arrivals",
+      "best_sellers": "Best Sellers",
+      "sale": "Sale",
+      "all_products": "All Products",
+      "electronics": "Electronics",
+      "clothing": "Clothing",
+      "home_garden": "Home & Garden",
+      "books": "Books",
+      "explore_products": "Explore our wide range of products",
+      "browse_categories": "Browse products by category",
+      "search": "Search",
+      "login": "Login",
+      "logout": "Logout",
+      "welcome": "Welcome, {username}",
+      "cart": "Cart ({count})",
+      "get_started": "Get Started",
+      "view_all": "View All {title}",
+      "book_demo": "Book a demo"
+    }
+  },
   "auth": {
     "signup": {
       "username": "Username",

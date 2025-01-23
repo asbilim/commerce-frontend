@@ -3,7 +3,7 @@ import React from "react";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -58,7 +58,7 @@ function SignupForm() {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-6 bg-white dark:bg-zinc-900 rounded-xl shadow-lg space-y-6">
+    <div className="w-full max-w-md mx-auto p-6 rounded-xl space-y-6">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
         <div className="space-y-4">
           {/* Username Field */}
@@ -161,7 +161,7 @@ function SignupForm() {
       <div className="text-center">
         <p className="text-sm text-muted-foreground">
           {t("auth.signup.already_have_account")}{" "}
-          <Link href="/signin" className="text-primary hover:underline">
+          <Link href="/auth/login" className="text-primary hover:underline">
             {t("auth.signup.signin")}
           </Link>
         </p>

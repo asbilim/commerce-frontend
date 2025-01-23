@@ -33,7 +33,7 @@ function PasswordResetLinkForm() {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-6 bg-white dark:bg-zinc-900 rounded-xl shadow-lg space-y-6">
+    <div className="w-full max-w-md mx-auto p-6  rounded-xl space-y-6">
       {!emailSent ? (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           <h2 className="text-xl font-semibold text-center">

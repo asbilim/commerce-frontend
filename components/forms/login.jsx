@@ -3,7 +3,7 @@ import React from "react";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -38,7 +38,7 @@ function LoginForm() {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-6 bg-white dark:bg-zinc-900 rounded-xl shadow-lg space-y-6">
+    <div className="w-full max-w-md mx-auto p-6   rounded-xl shadow-lg space-y-6">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
         <div className="space-y-4">
           {/* Email Field */}
@@ -86,7 +86,7 @@ function LoginForm() {
             )}
             <div className="text-right">
               <Link
-                href="/reset-password"
+                href="/auth/reset-password"
                 className="text-xs text-primary hover:underline">
                 {t("auth.login.forgot_password") || "Forgot password?"}
               </Link>
@@ -123,7 +123,7 @@ function LoginForm() {
       <div className="text-center">
         <p className="text-sm text-muted-foreground">
           {t("auth.login.no_account") || "Don't have an account?"}{" "}
-          <Link href="/signup" className="text-primary hover:underline">
+          <Link href="/auth/register" className="text-primary hover:underline">
             {t("auth.login.signup") || "Sign up"}
           </Link>
         </p>
