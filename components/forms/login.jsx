@@ -29,12 +29,10 @@ function LoginForm() {
 
   const onSubmit = (data) => {
     console.log("Login Data:", data);
-    // TODO: Implement backend login submission
   };
 
   const handleGoogleLogin = () => {
     console.log("Google Login Initiated");
-    // TODO: Implement Google OAuth login
   };
 
   return (

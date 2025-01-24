@@ -42,12 +42,24 @@
     }
   },
   "auth": {
+    "pending": {
+      "title": "Vérification de l'e-mail en attente",
+      "message": "Un e-mail a été envoyé à {email}. Veuillez consulter votre boîte de réception pour activer votre compte.",
+      "check_spam": "Si vous ne trouvez pas l'e-mail, veuillez vérifier votre dossier de courriers indésirables.",
+      "resend_email_button": "Renvoyer l'email de vérification",
+      "resend_cooldown_message": "Veuillez attendre 1 minute avant de réessayer "
+    },
     "signup": {
       "username": "Nom d'utilisateur",
       "email": "E-mail",
       "password": "Mot de passe",
       "confirm_password": "Confirmer le mot de passe",
       "signup_button": "S'inscrire",
+      "success": "E-mail de vérification envoyé.",
+      "error_username_taken": "Un utilisateur avec ce nom d'utilisateur existe déjà.",
+      "error_email_taken": "Un utilisateur est déjà enregistré avec cette adresse e-mail.",
+      "error_generic": "Une erreur s'est produite. Veuillez réessayer.",
+      "check_spam": "Si vous ne voyez pas l'e-mail, veuillez vérifier votre dossier de courriers indésirables.",
       "google_signup": "S'inscrire avec Google",
       "already_have_account": "Vous avez déjà un compte?",
       "signin": "Se connecter",

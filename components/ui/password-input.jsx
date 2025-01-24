@@ -66,7 +66,6 @@ function PasswordInput({
   return (
     <div>
       <div className="space-y-2">
-        <Label>{label}</Label>
         <div className="relative">
           <Input
             className="pe-9"
