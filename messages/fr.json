@@ -49,6 +49,14 @@
       "resend_email_button": "Renvoyer l'email de vérification",
       "resend_cooldown_message": "Veuillez attendre 1 minute avant de réessayer "
     },
+    "activation": {
+      "success_title": "Compte activé avec succès",
+      "success_message": "Votre compte a été activé avec succès. Vous pouvez maintenant vous connecter.",
+      "login_button": "Aller à la connexion",
+      "failure_title": "Échec de l'activation",
+      "failure_message": "Un problème est survenu lors de l'activation de votre compte. Veuillez réessayer.",
+      "try_again_button": "Réessayer"
+    },
     "signup": {
       "username": "Nom d'utilisateur",
       "email": "E-mail",
@@ -87,11 +95,13 @@
       "google_login": "Se connecter avec Google",
       "no_account": "Vous n'avez pas de compte?",
       "signup": "S'inscrire",
+      "failed": "Invalide email ou mot de passe",
+      "success": "Connexion réussi",
       "placeholder_email": "exemple@votreentreprise.com",
       "placeholder_password": "Entrez votre mot de passe",
       "validation": {
-        "invalid_email": "Adresse e-mail invalide",
-        "password_required": "Le mot de passe est requis"
+        "invalid_email": "Invalid email address",
+        "password_required": "Password is required"
       }
     },
     "passwordChange": {

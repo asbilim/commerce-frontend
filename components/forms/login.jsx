@@ -1,15 +1,18 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { signIn } from "next-auth/react";
 import { Link } from "@/i18n/routing";
-import { Button } from "@/components/ui/button";
+import { LoadingButton as Button } from "@/components/ui/loading-button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PasswordInput } from "@/components/ui/password-input";
 import { FaGoogle } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import { toast } from "sonner";
+import { useRouter } from "@/i18n/routing";
 
 const loginSchema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
@@ -18,28 +21,57 @@ const loginSchema = z.object({
 
 function LoginForm() {
   const t = useTranslations();
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
-    control, // Add control for Controller
+    control,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(loginSchema),
   });
 
-  const onSubmit = (data) => {
-    console.log("Login Data:", data);
+  const onSubmit = async (data) => {
+    setLoading(true);
+    const result = await signIn("credentials", {
+      email: data.email,
+      password: data.password,
+      redirect: false,
+    });
+
+    if (result?.error) {
+      toast.error(t("auth.login.failed"));
+    } else {
+      toast.success(t("auth.login.success"));
+      router.push({ pathname: "/" });
+    }
+    setLoading(false);
   };
 
-  const handleGoogleLogin = () => {
-    console.log("Google Login Initiated");
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signIn("google", {
+        redirect: false,
+        callbackUrl: "/",
+      });
+
+      if (result?.error) {
+        toast.error(t("auth.google_login.failed"));
+      } else if (result?.url) {
+        router.push(result.url);
+      }
+    } catch (error) {
+      toast.error(t("auth.google_login.error"));
+      console.error("Google login error:", error);
+    }
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-6   rounded-xl shadow-lg space-y-6">
+    <div className="w-full max-w-md mx-auto p-6 rounded-xl shadow-lg space-y-6">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
         <div className="space-y-4">
-          {/* Email Field */}
           <div className="space-y-2">
             <Label htmlFor="email">{t("auth.login.email") || "Email"}</Label>
             <Input
@@ -58,7 +90,6 @@ function LoginForm() {
             )}
           </div>
 
-          {/* Password Field using Controller */}
           <div className="space-y-2">
             <Label htmlFor="password">
               {t("auth.login.password") || "Password"}
@@ -82,21 +113,17 @@ function LoginForm() {
                 {t(errors.password.message) || errors.password.message}
               </p>
             )}
-            <div className="text-right">
-              <Link
-                href="/auth/reset-password"
-                className="text-xs text-primary hover:underline">
-                {t("auth.login.forgot_password") || "Forgot password?"}
-              </Link>
-            </div>
           </div>
         </div>
-        <Button type="submit" className="w-full">
+        <Button
+          type="submit"
+          className="w-full"
+          loading={loading}
+          disabled={loading}>
           {t("auth.login.login_button") || "Log In"}
         </Button>
       </form>
 
-      {/* Separator */}
       <div className="relative my-4">
         <div className="absolute inset-0 flex items-center">
           <span className="w-full border-t"></span>
@@ -108,7 +135,6 @@ function LoginForm() {
         </div>
       </div>
 
-      {/* Google Login Button */}
       <Button
         variant="outline"
         className="w-full flex items-center justify-center"
@@ -117,7 +143,6 @@ function LoginForm() {
         {t("auth.login.google_login") || "Log in with Google"}
       </Button>
 
-      {/* Signup Link */}
       <div className="text-center">
         <p className="text-sm text-muted-foreground">
           {t("auth.login.no_account") || "Don't have an account?"}{" "}

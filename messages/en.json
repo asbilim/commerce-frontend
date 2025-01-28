@@ -49,6 +49,14 @@
       "resend_email_button": "Resend Verification Email",
       "resend_cooldown_message": "Please wait 1 minute before trying again."
     },
+    "activation": {
+      "success_title": "Account Activated Successfully",
+      "success_message": "Your account has been successfully activated. You can now log in to your account.",
+      "login_button": "Go to Login",
+      "failure_title": "Activation Failed",
+      "failure_message": "There was an issue activating your account. Please try again.",
+      "try_again_button": "Try Again"
+    },
     "signup": {
       "username": "Username",
       "email": "Email",
@@ -89,6 +97,8 @@
       "signup": "Sign up",
       "placeholder_email": "hi@yourcompany.com",
       "placeholder_password": "Enter your password",
+      "failed": "Invalid email or password",
+      "success": "Login successful",
       "validation": {
         "invalid_email": "Invalid email address",
         "password_required": "Password is required"
