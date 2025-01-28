@@ -3,7 +3,7 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/config/theme";
-import { EcommerceHeader as Header } from "@/components/layout/header";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 export default async function LocaleLayout({ children, params }) {
@@ -19,7 +19,10 @@ export default async function LocaleLayout({ children, params }) {
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <Toaster />
+            {children}
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

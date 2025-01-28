@@ -3,13 +3,15 @@ import React from "react";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Link } from "@/i18n/routing";
-import { Button } from "@/components/ui/button";
+import { Link, useRouter } from "@/i18n/routing";
+import { LoadingButton as Button } from "@/components/ui/loading-button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PasswordInput } from "@/components/ui/password-input";
 import { FaGoogle } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import { registerUser } from "@/components/services/auth";
+import { toast } from "sonner";
 
 const signupSchema = z
   .object({
@@ -37,6 +39,7 @@ const signupSchema = z
 
 function SignupForm() {
   const t = useTranslations();
+  const [loading, setLoading] = React.useState(false);
   const {
     register,
     handleSubmit,
@@ -47,14 +50,32 @@ function SignupForm() {
     resolver: zodResolver(signupSchema),
   });
 
-  const onSubmit = (data) => {
+  const router = useRouter();
+  const onSubmit = async (data) => {
+    setLoading(true);
+    const result = await registerUser(data);
+    console.log(result);
+    setLoading(false);
     console.log("Form Data:", data);
-    // Handle form submission logic here
+    if (result.success) {
+      toast.success(t("auth.signup.success") || "Verification email sent.");
+      router.push({
+        pathname: "/auth/account-activation/sent",
+        query: { email: data.email },
+      });
+    } else {
+      if (result.errors) {
+        Object.keys(result.errors).forEach((key) => {
+          toast.error(`${key}: ${result.errors[key].join(", ")}`);
+        });
+      } else {
+        toast.error(result.message || "Something went wrong.");
+      }
+    }
   };
 
   const handleGoogleSignup = () => {
     console.log("Google Signup Initiated");
-    // Handle Google signup logic here
   };
 
   return (
@@ -132,7 +153,11 @@ function SignupForm() {
             )}
           </div>
         </div>
-        <Button type="submit" className="w-full">
+        <Button
+          type="submit"
+          className="w-full"
+          loading={loading}
+          spinnerVariant="pinwheel">
           {t("auth.signup.signup_button")}
         </Button>
       </form>

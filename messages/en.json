@@ -42,12 +42,32 @@
     }
   },
   "auth": {
+    "pending": {
+      "title": "Email Verification Pending",
+      "message": "An email has been sent to {email}. Please check your inbox to activate your account.",
+      "check_spam": "If you don't see the email, please check your spam folder.",
+      "resend_email_button": "Resend Verification Email",
+      "resend_cooldown_message": "Please wait 1 minute before trying again."
+    },
+    "activation": {
+      "success_title": "Account Activated Successfully",
+      "success_message": "Your account has been successfully activated. You can now log in to your account.",
+      "login_button": "Go to Login",
+      "failure_title": "Activation Failed",
+      "failure_message": "There was an issue activating your account. Please try again.",
+      "try_again_button": "Try Again"
+    },
     "signup": {
       "username": "Username",
       "email": "Email",
       "password": "Password",
       "confirm_password": "Confirm Password",
       "signup_button": "Sign up",
+      "success": "Verification email sent.",
+      "error_username_taken": "A user with that username already exists.",
+      "error_email_taken": "A user is already registered with this email address.",
+      "error_generic": "Something went wrong. Please try again.",
+      "check_spam": "If you don't see the email, please check your spam folder.",
       "google_signup": "Sign up with Google",
       "already_have_account": "Already have an account?",
       "signin": "Sign in",
@@ -77,6 +97,8 @@
       "signup": "Sign up",
       "placeholder_email": "hi@yourcompany.com",
       "placeholder_password": "Enter your password",
+      "failed": "Invalid email or password",
+      "success": "Login successful",
       "validation": {
         "invalid_email": "Invalid email address",
         "password_required": "Password is required"
