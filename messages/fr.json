@@ -1,9 +1,84 @@
 {
   "homepage": {
-    "greeting": "Bonjour, {name}!",
-    "welcome": "Bienvenue sur notre plateforme"
+    "hero": {
+      "title": "Élevez Votre\nStyle Quotidien",
+      "subtitle": "Découvrez des essentiels soigneusement conçus pour la garde-robe moderne",
+      "cta": "Explorer les Nouveautés"
+    },
+    "brands": {
+      "title": "Fait Confiance par les Grandes Marques"
+    },
+    "categories": {
+      "title": "Acheter par Catégorie"
+    },
+    "products": {
+      "featured": "Nouveautés",
+      "trending": "Tendances Actuelles"
+    },
+    "blog": {
+      "title": "Du Journal"
+    },
+    "banner": {
+      "title": "Collection d'Été",
+      "subtitle": "Découvrez nos derniers essentiels d'été, conçus pour le confort et le style",
+      "cta": "Découvrir la Collection"
+    },
+    "newsletter": {
+      "title": "Restez Informé",
+      "subtitle": "Abonnez-vous pour recevoir des mises à jour sur les nouveaux produits et des offres exclusives",
+      "placeholder": "Entrez votre email",
+      "cta": "S'abonner"
+    },
+    "common": {
+      "view_all": "Voir Tout"
+    }
   },
   "ui": {
+    "footer": {
+      "company": {
+        "description": "Apporter des produits de qualité à votre porte depuis 2024. Nous croyons en un commerce durable et un service client exceptionnel.",
+        "social": {
+          "facebook": "Suivez-nous sur Facebook",
+          "instagram": "Suivez-nous sur Instagram",
+          "twitter": "Suivez-nous sur Twitter",
+          "youtube": "Suivez-nous sur YouTube"
+        }
+      },
+      "quick_links": {
+        "title": "Liens rapides",
+        "shop_all": "Tout acheter",
+        "new_arrivals": "Nouveautés",
+        "best_sellers": "Meilleures ventes",
+        "sale": "Promotions",
+        "blog": "Blog"
+      },
+      "customer_service": {
+        "title": "Service client",
+        "contact": "Contactez-nous",
+        "shipping": "Informations sur la livraison",
+        "returns": "Retours & Échanges",
+        "faq": "FAQ",
+        "size_guide": "Guide des tailles"
+      },
+      "newsletter": {
+        "title": "Restez informé",
+        "description": "Abonnez-vous à notre newsletter pour des offres exclusives et les dernières actualités.",
+        "placeholder": "Entrez votre email",
+        "subscribe": "S'abonner",
+        "success": "Merci pour votre abonnement !"
+      },
+      "contact": {
+        "address": "123 Commerce St, Ville, Pays",
+        "email": "support@ecomstore.com",
+        "phone": "+1 (555) 123-4567"
+      },
+      "bottom_bar": {
+        "copyright": "© {year} EcomStore. Tous droits réservés.",
+        "privacy": "Politique de confidentialité",
+        "terms": "Conditions d'utilisation",
+        "accessibility": "Accessibilité"
+      }
+    },
     "theme": {
       "toggle_theme": "Changer le thème",
       "light": "Clair",
@@ -39,6 +114,116 @@
       "back_to_home": "Retour à l'accueil",
       "welcome": "Bienvenue chez Commerce",
       "all_rights": "Tous droits réservés."
+    },
+    "contact": {
+      "hero": {
+        "title": "Contactez-nous",
+        "description": "Notre équipe est là pour vous aider. Nous vous répondrons dans les plus brefs délais."
+      },
+      "form": {
+        "title": "Envoyez-nous un message",
+        "name": "Nom complet",
+        "email": "Adresse e-mail",
+        "subject": "Sujet",
+        "message": "Message",
+        "submit": "Envoyer le message",
+        "success": "Message envoyé avec succès",
+        "error": "Une erreur s'est produite",
+        "placeholders": {
+          "name": "Jean Dupont",
+          "email": "jean@exemple.com",
+          "subject": "Question sur ma commande",
+          "message": "Écrivez votre message ici..."
+        }
+      },
+      "contact_info": {
+        "title": "Informations de contact",
+        "subtitle": "Autres façons de nous contacter",
+        "address": {
+          "title": "Adresse",
+          "line1": "123 Rue du Commerce",
+          "line2": "75001 Paris, France"
+        },
+        "phone": {
+          "title": "Téléphone",
+          "sales": "Ventes: +33 1 23 45 67 89",
+          "support": "Support: +33 1 23 45 67 90"
+        },
+        "email": {
+          "title": "Email",
+          "sales": "ventes@ecomstore.com",
+          "support": "support@ecomstore.com"
+        },
+        "hours": {
+          "title": "Heures d'ouverture",
+          "weekdays": "Lundi - Vendredi: 9h - 18h",
+          "weekend": "Samedi: 10h - 16h"
+        }
+      },
+      "faq": {
+        "title": "Questions fréquentes",
+        "description": "Trouvez rapidement des réponses à vos questions",
+        "questions": {
+          "shipping": {
+            "question": "Quels sont les délais de livraison?",
+            "answer": "Les délais de livraison varient selon votre localisation. En général, comptez 2-3 jours ouvrables pour la France métropolitaine."
+          },
+          "returns": {
+            "question": "Comment puis-je retourner un article?",
+            "answer": "Vous avez 30 jours pour retourner un article. Connectez-vous à votre compte pour initier un retour."
+          },
+          "tracking": {
+            "question": "Comment suivre ma commande?",
+            "answer": "Une fois votre commande expédiée, vous recevrez un email avec un numéro de suivi."
+          }
+        }
+      },
+      "validation": {
+        "name_required": "Le nom est requis",
+        "email_required": "L'email est requis",
+        "email_invalid": "L'email n'est pas valide",
+        "subject_required": "Le sujet est requis",
+        "message_required": "Le message est requis",
+        "message_min": "Le message doit contenir au moins 10 caractères",
+        "message_max": "Le message ne doit pas depasser 500 charactères"
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "À Propos de Notre Boutique",
+        "description": "Offrir des produits de qualité et un service exceptionnel depuis 2010"
+      },
+      "story": {
+        "title": "Notre Histoire",
+        "subtitle": "Le parcours qui nous a menés ici",
+        "content": {
+          "part1": "Nous avons commencé avec une vision simple : créer une expérience d'achat en ligne qui allie des produits de qualité à un service client exceptionnel.",
+          "part2": "Aujourd'hui, nous sommes fiers de servir des clients dans le monde entier, en maintenant le même engagement envers la qualité et le service qui nous a inspirés dès le premier jour."
+        }
+      },
+      "stats": {
+        "title": "En Chiffres",
+        "subtitle": "Notre croissance et notre impact",
+        "customers": "Clients Satisfaits",
+        "products": "Produits Disponibles",
+        "delivery": "Livraison à Temps"
+      },
+      "values": {
+        "title": "Nos Valeurs",
+        "subtitle": "Ce qui nous motive",
+        "quality": {
+          "title": "La Qualité Avant Tout",
+          "description": "Nous ne faisons jamais de compromis sur la qualité de nos produits et services"
+        },
+        "innovation": {
+          "title": "Innovation Continue",
+          "description": "Nous évoluons constamment pour répondre aux besoins changeants de nos clients"
+        },
+        "satisfaction": {
+          "title": "Satisfaction Client",
+          "description": "Votre satisfaction est notre priorité absolue et notre mesure de succès"
+        }
+      }
     }
   },
   "auth": {

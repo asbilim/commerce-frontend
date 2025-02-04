@@ -5,6 +5,14 @@ import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/config/theme";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
+import { EcommerceFooter } from "@/components/layout/footer";
+import { EcommerceHeader } from "@/components/layout/header";
+import { clashGrotesk } from "@/lib/fonts";
+
+export const metadata = {
+  title: "Modern Ecommerce shop",
+  description: "This is a full nextjs Ecommerce customizable shop",
+};
 
 export default async function LocaleLayout({ children, params }) {
   const { locale } = await params;
@@ -16,12 +24,14 @@ export default async function LocaleLayout({ children, params }) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={clashGrotesk.variable}>
       <body>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <Toaster />
+            <EcommerceHeader />
             {children}
+            <EcommerceFooter />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
