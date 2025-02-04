@@ -4,6 +4,51 @@
     "welcome": "Welcome to our platform"
   },
   "ui": {
+    "footer": {
+      "company": {
+        "description": "Bringing quality products to your doorstep since 2024. We believe in sustainable commerce and exceptional customer service.",
+        "social": {
+          "facebook": "Follow us on Facebook",
+          "instagram": "Follow us on Instagram",
+          "twitter": "Follow us on Twitter",
+          "youtube": "Follow us on YouTube"
+        }
+      },
+      "quick_links": {
+        "title": "Quick Links",
+        "shop_all": "Shop All",
+        "new_arrivals": "New Arrivals",
+        "best_sellers": "Best Sellers",
+        "sale": "Sale",
+        "blog": "Blog"
+      },
+      "customer_service": {
+        "title": "Customer Service",
+        "contact": "Contact Us",
+        "shipping": "Shipping Information",
+        "returns": "Returns & Exchanges",
+        "faq": "FAQ",
+        "size_guide": "Size Guide"
+      },
+      "newsletter": {
+        "title": "Stay Updated",
+        "description": "Subscribe to our newsletter for exclusive offers and the latest news.",
+        "placeholder": "Enter your email",
+        "subscribe": "Subscribe",
+        "success": "Thanks for subscribing!"
+      },
+      "contact": {
+        "address": "123 Commerce St, City, Country",
+        "email": "support@ecomstore.com",
+        "phone": "+1 (555) 123-4567"
+      },
+      "bottom_bar": {
+        "copyright": "© {year} EcomStore. All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "accessibility": "Accessibility"
+      }
+    },
     "theme": {
       "toggle_theme": "Toggle theme",
       "light": "Light",

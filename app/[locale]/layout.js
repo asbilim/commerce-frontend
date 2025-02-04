@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/config/theme";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
+import { EcommerceFooter } from "@/components/layout/footer";
 
 export default async function LocaleLayout({ children, params }) {
   const { locale } = await params;
@@ -22,6 +23,7 @@ export default async function LocaleLayout({ children, params }) {
           <ThemeProvider>
             <Toaster />
             {children}
+            <EcommerceFooter />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

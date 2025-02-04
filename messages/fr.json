@@ -4,6 +4,51 @@
     "welcome": "Bienvenue sur notre plateforme"
   },
   "ui": {
+    "footer": {
+      "company": {
+        "description": "Apporter des produits de qualité à votre porte depuis 2024. Nous croyons en un commerce durable et un service client exceptionnel.",
+        "social": {
+          "facebook": "Suivez-nous sur Facebook",
+          "instagram": "Suivez-nous sur Instagram",
+          "twitter": "Suivez-nous sur Twitter",
+          "youtube": "Suivez-nous sur YouTube"
+        }
+      },
+      "quick_links": {
+        "title": "Liens rapides",
+        "shop_all": "Tout acheter",
+        "new_arrivals": "Nouveautés",
+        "best_sellers": "Meilleures ventes",
+        "sale": "Promotions",
+        "blog": "Blog"
+      },
+      "customer_service": {
+        "title": "Service client",
+        "contact": "Contactez-nous",
+        "shipping": "Informations sur la livraison",
+        "returns": "Retours & Échanges",
+        "faq": "FAQ",
+        "size_guide": "Guide des tailles"
+      },
+      "newsletter": {
+        "title": "Restez informé",
+        "description": "Abonnez-vous à notre newsletter pour des offres exclusives et les dernières actualités.",
+        "placeholder": "Entrez votre email",
+        "subscribe": "S'abonner",
+        "success": "Merci pour votre abonnement !"
+      },
+      "contact": {
+        "address": "123 Commerce St, Ville, Pays",
+        "email": "support@ecomstore.com",
+        "phone": "+1 (555) 123-4567"
+      },
+      "bottom_bar": {
+        "copyright": "© {year} EcomStore. Tous droits réservés.",
+        "privacy": "Politique de confidentialité",
+        "terms": "Conditions d'utilisation",
+        "accessibility": "Accessibilité"
+      }
+    },
     "theme": {
       "toggle_theme": "Changer le thème",
       "light": "Clair",
