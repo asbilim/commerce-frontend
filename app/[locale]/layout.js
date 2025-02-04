@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/config/theme";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import { EcommerceFooter } from "@/components/layout/footer";
+import { EcommerceHeader } from "@/components/layout/header";
 
 export default async function LocaleLayout({ children, params }) {
   const { locale } = await params;
@@ -22,6 +23,7 @@ export default async function LocaleLayout({ children, params }) {
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <Toaster />
+            <EcommerceHeader />
             {children}
             <EcommerceFooter />
           </ThemeProvider>
