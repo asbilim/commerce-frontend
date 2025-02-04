@@ -7,6 +7,11 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      display: ["Clash Grotesk", "sans-serif"],
+      body: ["Satoshi", "sans-serif"],
+      price: ["Space Mono", "monospace"],
+    },
     extend: {
       colors: {
         background: "hsl(var(--background))",

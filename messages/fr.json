@@ -154,7 +154,8 @@
         "email_invalid": "L'email n'est pas valide",
         "subject_required": "Le sujet est requis",
         "message_required": "Le message est requis",
-        "message_min": "Le message doit contenir au moins 10 caractères"
+        "message_min": "Le message doit contenir au moins 10 caractères",
+        "message_max": "Le message ne doit pas depasser 500 charactères"
       }
     },
     "about": {
