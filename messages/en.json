@@ -1,7 +1,37 @@
 {
   "homepage": {
-    "greeting": "Hello, {name}!",
-    "welcome": "Welcome to our platform"
+    "hero": {
+      "title": "Elevate Your\nEveryday Style",
+      "subtitle": "Discover thoughtfully crafted essentials for the modern wardrobe",
+      "cta": "Explore Latest"
+    },
+    "brands": {
+      "title": "Trusted By Leading Brands"
+    },
+    "categories": {
+      "title": "Shop by Category"
+    },
+    "products": {
+      "featured": "New Arrivals",
+      "trending": "Trending Now"
+    },
+    "blog": {
+      "title": "From The Journal"
+    },
+    "banner": {
+      "title": "Summer Collection",
+      "subtitle": "Discover our latest summer essentials, designed for comfort and style",
+      "cta": "Shop Collection"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "subtitle": "Subscribe to receive updates about new products and exclusive offers",
+      "placeholder": "Enter your email",
+      "cta": "Subscribe"
+    },
+    "common": {
+      "view_all": "View All"
+    }
   },
   "ui": {
     "footer": {

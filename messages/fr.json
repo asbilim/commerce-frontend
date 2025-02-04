@@ -1,7 +1,37 @@
 {
   "homepage": {
-    "greeting": "Bonjour, {name}!",
-    "welcome": "Bienvenue sur notre plateforme"
+    "hero": {
+      "title": "Élevez Votre\nStyle Quotidien",
+      "subtitle": "Découvrez des essentiels soigneusement conçus pour la garde-robe moderne",
+      "cta": "Explorer les Nouveautés"
+    },
+    "brands": {
+      "title": "Fait Confiance par les Grandes Marques"
+    },
+    "categories": {
+      "title": "Acheter par Catégorie"
+    },
+    "products": {
+      "featured": "Nouveautés",
+      "trending": "Tendances Actuelles"
+    },
+    "blog": {
+      "title": "Du Journal"
+    },
+    "banner": {
+      "title": "Collection d'Été",
+      "subtitle": "Découvrez nos derniers essentiels d'été, conçus pour le confort et le style",
+      "cta": "Découvrir la Collection"
+    },
+    "newsletter": {
+      "title": "Restez Informé",
+      "subtitle": "Abonnez-vous pour recevoir des mises à jour sur les nouveaux produits et des offres exclusives",
+      "placeholder": "Entrez votre email",
+      "cta": "S'abonner"
+    },
+    "common": {
+      "view_all": "Voir Tout"
+    }
   },
   "ui": {
     "footer": {
