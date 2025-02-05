@@ -33,6 +33,32 @@
       "view_all": "View All"
     }
   },
+  "shop": {
+    "title": "Shop",
+    "filters": "Filters",
+    "price": "Price",
+    "categories": {
+      "title": "Categories",
+      "electronics": "Electronics",
+      "clothing": "Clothing",
+      "books": "Books"
+    },
+    "brands": {
+      "title": "Brands",
+      "apple": "Apple",
+      "samsung": "Samsung",
+      "nike": "Nike"
+    },
+    "ratings": "Ratings",
+    "rating": "{rate, plural, =0 {0 stars} =1 {1 star} other {# stars}}.",
+    "availability": {
+      "title": "Availability",
+      "all": "All",
+      "inStock": "In Stock",
+      "outOfStock": "Out of Stock"
+    },
+    "add_to_cart": "Add to Cart"
+  },
   "ui": {
     "footer": {
       "company": {

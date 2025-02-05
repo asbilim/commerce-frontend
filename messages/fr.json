@@ -33,6 +33,37 @@
       "view_all": "Voir Tout"
     }
   },
+  "shop": {
+    "title": "Boutique",
+    "filters": "Filtres",
+    "price": "Prix",
+    "categories": {
+      "title": "Catégories",
+      "electronics": "Électronique",
+      "clothing": "Vêtements",
+      "books": "Livres"
+    },
+    "brands": {
+      "title": "Marques",
+      "apple": "Apple",
+      "samsung": "Samsung",
+      "nike": "Nike"
+    },
+    "ratings": "Évaluations",
+    "rating": "{rate, plural, =0 {0 étoile} =1 {1 étoile} other {# étoiles}}.",
+    "availability": {
+      "title": "Disponibilité",
+      "all": "Tous",
+      "inStock": "En stock",
+      "outOfStock": "Rupture de stock"
+    },
+    "add_to_cart": "Ajouter au panier",
+    "sections": {
+      "recent": "Produits récents",
+      "featured": "Featured products",
+      "all": "Tous les produits"
+    }
+  },
   "ui": {
     "footer": {
       "company": {
