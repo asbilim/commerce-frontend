@@ -11,6 +11,7 @@ import {
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Link } from "@/i18n/routing";
 
 export default function Home() {
   const t = useTranslations("homepage");
@@ -33,7 +34,7 @@ export default function Home() {
             <Button
               size="lg"
               className="group animate-in fade-in slide-in-from-left duration-1000 delay-300">
-              {t("hero.cta")}
+              <Link href="/shop">{t("hero.cta")}</Link>
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
