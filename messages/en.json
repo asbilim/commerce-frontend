@@ -139,7 +139,11 @@
       "cart": "Cart ({count})",
       "get_started": "Get Started",
       "view_all": "View All {title}",
-      "book_demo": "Book a demo"
+      "book_demo": "Book a demo",
+      "profile": "Profile",
+      "orders": "My Orders",
+      "wishlist": "Wishlist",
+      "settings": "Settings"
     },
     "contact": {
       "hero": {
@@ -346,6 +350,97 @@
       "validation": {
         "invalid_email": "Invalid email address"
       }
+    }
+  },
+  "account": {
+    "profile": {
+      "title": "Profile",
+      "description": "Manage your profile information",
+      "please_login": "Please login to view your profile",
+      "edit_button": "Edit Profile",
+      "cancel_button": "Cancel",
+      "save_button": "Save Changes",
+      "fields": {
+        "first_name": {
+          "label": "First Name",
+          "placeholder": "Enter your first name"
+        },
+        "last_name": {
+          "label": "Last Name",
+          "placeholder": "Enter your last name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email"
+        }
+      },
+      "notifications": {
+        "update_success": "Profile updated successfully",
+        "update_error": "Failed to update profile"
+      }
+    },
+    "invoices": {
+      "title": "Invoices",
+      "description": "View and download your past invoices",
+      "no_invoices": "No invoices found",
+      "table": {
+        "invoice_number": "Invoice Number",
+        "date": "Date",
+        "amount": "Amount",
+        "status": "Status",
+        "download": "Download"
+      },
+      "status": {
+        "paid": "Paid",
+        "pending": "Pending",
+        "overdue": "Overdue"
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Manage your account settings and preferences",
+      "sections": {
+        "preferences": {
+          "title": "Preferences",
+          "description": "Customize your shopping experience",
+          "language": {
+            "label": "Language",
+            "description": "Select your preferred language"
+          },
+          "currency": {
+            "label": "Currency",
+            "description": "Choose your preferred currency"
+          },
+          "notifications": {
+            "label": "Notifications",
+            "description": "Manage your notification preferences",
+            "options": {
+              "order_updates": "Order Updates",
+              "promotions": "Promotions and Deals",
+              "newsletter": "Newsletter"
+            }
+          }
+        },
+        "security": {
+          "title": "Security",
+          "description": "Manage your account security",
+          "change_password": {
+            "label": "Change Password",
+            "button": "Update Password"
+          },
+          "two_factor": {
+            "label": "Two-Factor Authentication",
+            "description": "Add an extra layer of security to your account",
+            "button": "Enable 2FA"
+          }
+        }
+      }
+    },
+    "navigation": {
+      "profile": "Profile",
+      "invoices": "Invoices",
+      "settings": "Settings",
+      "back_to_account": "Back to Account"
     }
   }
 }

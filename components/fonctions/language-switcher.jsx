@@ -1,47 +1,69 @@
-import { useState } from "react";
+"use client";
+
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/routing";
-import { usePathname } from "@/i18n/routing";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Image from "next/image";
 
 const languages = [
-  { code: "en", name: "English", flag: "🇬🇧" },
-  { code: "fr", name: "Français", flag: "🇫🇷" },
-  { code: "de", name: "Deutsch", flag: "🇩🇪" },
-  { code: "es", name: "Español", flag: "🇪🇸" },
+  {
+    code: "en",
+    name: "English",
+    flag: "/images/flags/gb.svg",
+  },
+  {
+    code: "fr",
+    name: "Français",
+    flag: "/images/flags/fr.svg",
+  },
+  // Add more languages as needed
 ];
 
 export function LanguageSwitcher() {
-  const [currentLanguage, setCurrentLanguage] = useState(languages[0]);
+  const locale = useLocale();
+  const router = useRouter();
   const pathname = usePathname();
 
-  const handleLanguageChange = (language) => {
-    setCurrentLanguage(language);
+  const currentLanguage = languages.find((lang) => lang.code === locale) || languages[0];
+
+  const handleLanguageChange = (languageCode) => {
+    const newPathname = pathname.replace(`/${locale}`, `/${languageCode}`);
+    router.push(newPathname);
   };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          size="sm"
-          className="w-full justify-start md:w-auto">
-          <span className="mr-2">{currentLanguage.flag}</span>
-          <span className="hidden md:inline">{currentLanguage.name}</span>
+        <Button variant="ghost" size="icon" className="w-8 h-8 p-0">
+          <Image
+            src={currentLanguage.flag}
+            alt={currentLanguage.name}
+            width={24}
+            height={24}
+            className="rounded-sm"
+          />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {languages.map((language) => (
-          <DropdownMenuItem key={language.code}>
-            <span className="mr-2">{language.flag}</span>
-            <Link href={pathname} locale={language.code}>
-              {language.name}
-            </Link>
+          <DropdownMenuItem
+            key={language.code}
+            onClick={() => handleLanguageChange(language.code)}
+            className="flex items-center gap-2">
+            <Image
+              src={language.flag}
+              alt={language.name}
+              width={20}
+              height={20}
+              className="rounded-sm"
+            />
+            <span>{language.name}</span>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

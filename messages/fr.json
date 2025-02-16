@@ -139,7 +139,11 @@
       "cart": "Panier ({count})",
       "get_started": "Commencer",
       "view_all": "Voir tous les {title}",
-      "book_demo": "Réserver une démo"
+      "book_demo": "Réserver une démo",
+      "profile": "Profil",
+      "orders": "Mes Commandes",
+      "wishlist": "Liste de Souhaits",
+      "settings": "Paramètres"
     },
     "authLayout": {
       "back_to_home": "Retour à l'accueil",
@@ -350,6 +354,97 @@
       "validation": {
         "invalid_email": "Adresse e-mail invalide"
       }
+    }
+  },
+  "account": {
+    "profile": {
+      "title": "Profil",
+      "description": "Gérer vos informations de profil",
+      "please_login": "Veuillez vous connecter pour voir votre profil",
+      "edit_button": "Modifier le profil",
+      "cancel_button": "Annuler",
+      "save_button": "Enregistrer les modifications",
+      "fields": {
+        "first_name": {
+          "label": "Prénom",
+          "placeholder": "Entrez votre prénom"
+        },
+        "last_name": {
+          "label": "Nom",
+          "placeholder": "Entrez votre nom"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Entrez votre email"
+        }
+      },
+      "notifications": {
+        "update_success": "Profil mis à jour avec succès",
+        "update_error": "Échec de la mise à jour du profil"
+      }
+    },
+    "invoices": {
+      "title": "Factures",
+      "description": "Consultez et téléchargez vos factures passées",
+      "no_invoices": "Aucune facture trouvée",
+      "table": {
+        "invoice_number": "Numéro de facture",
+        "date": "Date",
+        "amount": "Montant",
+        "status": "Statut",
+        "download": "Télécharger"
+      },
+      "status": {
+        "paid": "Payée",
+        "pending": "En attente",
+        "overdue": "En retard"
+      }
+    },
+    "settings": {
+      "title": "Paramètres",
+      "description": "Gérez vos paramètres et préférences de compte",
+      "sections": {
+        "preferences": {
+          "title": "Préférences",
+          "description": "Personnalisez votre expérience d'achat",
+          "language": {
+            "label": "Langue",
+            "description": "Sélectionnez votre langue préférée"
+          },
+          "currency": {
+            "label": "Devise",
+            "description": "Choisissez votre devise préférée"
+          },
+          "notifications": {
+            "label": "Notifications",
+            "description": "Gérez vos préférences de notification",
+            "options": {
+              "order_updates": "Mises à jour des commandes",
+              "promotions": "Promotions et offres",
+              "newsletter": "Newsletter"
+            }
+          }
+        },
+        "security": {
+          "title": "Sécurité",
+          "description": "Gérez la sécurité de votre compte",
+          "change_password": {
+            "label": "Changer le mot de passe",
+            "button": "Mettre à jour le mot de passe"
+          },
+          "two_factor": {
+            "label": "Authentification à deux facteurs",
+            "description": "Ajoutez une couche de sécurité supplémentaire à votre compte",
+            "button": "Activer la 2FA"
+          }
+        }
+      }
+    },
+    "navigation": {
+      "profile": "Profil",
+      "invoices": "Factures",
+      "settings": "Paramètres",
+      "back_to_account": "Retour au compte"
     }
   }
 }
