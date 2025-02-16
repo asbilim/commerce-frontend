@@ -139,7 +139,11 @@
       "cart": "Panier ({count})",
       "get_started": "Commencer",
       "view_all": "Voir tous les {title}",
-      "book_demo": "Réserver une démo"
+      "book_demo": "Réserver une démo",
+      "profile": "Profil",
+      "orders": "Mes Commandes",
+      "wishlist": "Liste de Souhaits",
+      "settings": "Paramètres"
     },
     "authLayout": {
       "back_to_home": "Retour à l'accueil",

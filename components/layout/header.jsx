@@ -31,13 +31,14 @@ import {
 import { Menu, MoveRight, Search, ShoppingCart, User, X } from "lucide-react";
 import { ThemeToggle } from "@/components/fonctions/theme-toggle";
 import { LanguageSwitcher } from "../fonctions/language-switcher";
+import { useSession, signOut } from "next-auth/react";
 
 function EcommerceHeader() {
   const t = useTranslations("ui.header");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [cartCount, setCartCount] = useState(0);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [username, setUsername] = useState("");
+  const { data: session, status } = useSession();
+  const isLoading = status === "loading";
 
   const navigationItems = [
     { title: t("home"), href: "/" },
@@ -260,13 +261,45 @@ function EcommerceHeader() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-56">
-              {isLoggedIn ? (
+              {isLoading ? (
+                <DropdownMenuItem disabled>
+                  Loading...
+                </DropdownMenuItem>
+              ) : session ? (
                 <>
-                  <DropdownMenuItem>
-                    {t("welcome", { username })}
+                  <DropdownMenuItem className="flex flex-col items-start">
+                    <div className="font-medium">
+                      {t("welcome", { username: session.user.name })}
+                    </div>
+                    <span className="text-sm text-muted-foreground">
+                      {session.user.email}
+                    </span>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem>{t("logout")}</DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/account/profile" className="w-full">
+                      {t("profile")}
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/account/orders" className="w-full">
+                      {t("orders")}
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/account/wishlist" className="w-full">
+                      {t("wishlist")}
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/account/settings" className="w-full">
+                      {t("settings")}
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={() => signOut()}>
+                    {t("logout")}
+                  </DropdownMenuItem>
                 </>
               ) : (
                 <DropdownMenuItem asChild>

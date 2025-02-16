@@ -139,7 +139,11 @@
       "cart": "Cart ({count})",
       "get_started": "Get Started",
       "view_all": "View All {title}",
-      "book_demo": "Book a demo"
+      "book_demo": "Book a demo",
+      "profile": "Profile",
+      "orders": "My Orders",
+      "wishlist": "Wishlist",
+      "settings": "Settings"
     },
     "contact": {
       "hero": {
