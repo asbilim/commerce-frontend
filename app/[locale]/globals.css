@@ -4,100 +4,68 @@
 
 @layer base {
   :root {
-    /* Base Neutrals */
-    --background: 240 11% 98%;
-    --foreground: 240 6% 10%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 6% 10%;
-
-    /* Modern Primaries */
-    --primary: 240 5.6% 26.5%;
-    --primary-foreground: 240 11% 98%;
-    --primary-hover: 240 5.1% 22.7%;
-
-    /* Accent & Interactive */
-    --accent: 210 16% 93%;
-    --accent-foreground: 240 5.6% 26.5%;
-    --ring: 240 5.6% 26.5%;
-
-    /* Semantic Colors */
-    --destructive: 357 81% 59%;
-    --success: 160 52% 49%;
-    --warning: 32 95% 64%;
-    --info: 206 79% 58%;
-
-    /* Surface & Depth */
-    --muted: 240 11% 94%;
-    --muted-foreground: 240 4% 46%;
-    --border: 240 11% 90%;
-    --input: 240 11% 95%;
-
-    /* Popover/Dropdown Colors */
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 6% 10%;
-
-    /* Navigation Menu Colors */
-    --nav-menu: 0 0% 100%;
-    --nav-menu-foreground: 240 6% 10%;
-
-    /* Shadows */
-    --shadow-sm: 240 6% 10% / 0.05;
-    --shadow-md: 240 6% 10% / 0.1;
-    --shadow-lg: 240 6% 10% / 0.15;
-
-    /* Radius */
     --radius: 0.75rem;
     --radius-lg: 1.25rem;
 
-    /* Glass Effects */
-    --backdrop-blur: blur(16px);
-    --backdrop-opacity: 0.98;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+
+    --radius: 0.5rem;
   }
 
   .dark {
-    /* Deep Neutrals */
-    --background: 240 6% 10%;
-    --foreground: 240 11% 98%;
-    --card: 240 5.6% 16%;
-    --card-foreground: 240 11% 98%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    /* Dark Primaries */
-    --primary: 240 11% 85%;
-    --primary-foreground: 240 6% 10%;
-    --primary-hover: 240 11% 90%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    /* Dark Accents */
-    --accent: 240 5.6% 22%;
-    --accent-foreground: 240 11% 98%;
-    --ring: 240 11% 85%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Dark Semantic */
-    --destructive: 357 81% 52%;
-    --success: 160 52% 42%;
-    --warning: 32 95% 55%;
-    --info: 206 79% 49%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
 
-    /* Depth & Texture */
-    --muted: 240 5.6% 20%;
-    --muted-foreground: 240 11% 85%;
-    --border: 240 5.6% 24%;
-    --input: 240 5.6% 22%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
 
-    /* Dark Popover/Dropdown Colors */
-    --popover: 240 5.6% 16%;
-    --popover-foreground: 240 11% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    /* Dark Navigation Menu Colors */
-    --nav-menu: 240 5.6% 16%;
-    --nav-menu-foreground: 240 11% 98%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
 
-    /* Dark Shadows */
-    --shadow-sm: 240 11% 2% / 0.5;
-    --shadow-md: 240 11% 2% / 0.4;
-    --shadow-lg: 240 11% 2% / 0.3;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
 
-    /* Enhanced Glass */
-    --backdrop-opacity: 0.95;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
   }
 }
 

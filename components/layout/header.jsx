@@ -32,6 +32,7 @@ import { Menu, MoveRight, Search, ShoppingCart, User, X } from "lucide-react";
 import { ThemeToggle } from "@/components/fonctions/theme-toggle";
 import { LanguageSwitcher } from "../fonctions/language-switcher";
 import { useSession, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 function EcommerceHeader() {
   const t = useTranslations("ui.header");
@@ -39,56 +40,66 @@ function EcommerceHeader() {
   const [cartCount, setCartCount] = useState(0);
   const { data: session, status } = useSession();
   const isLoading = status === "loading";
+  const router = useRouter();
 
   const navigationItems = [
-    { title: t("home"), href: "/" },
+    {
+      title: t("home"),
+      href: "/",
+    },
     {
       title: t("shop"),
-      description: t("explore_products"),
-      featured: [
-        {
-          title: t("new_arrivals"),
-          href: "/shop/new-arrivals",
-          image: "/api/placeholder/300/200",
-          description: "Discover our latest collections and trending items",
-        },
-        {
-          title: t("best_sellers"),
-          href: "/shop/best-sellers",
-          image: "/api/placeholder/300/200",
-          description: "Shop our most popular products",
-        },
-      ],
-      items: [
-        { title: t("new_arrivals"), href: "/shop/new-arrivals" },
-        { title: t("best_sellers"), href: "/shop/best-sellers" },
-        { title: t("sale"), href: "/shop/sale" },
-        { title: t("all_products"), href: "/shop/all" },
-      ],
+      href: "/shop", // Direct link to shop page
+      megaMenu: {
+        description: t("explore_products"),
+        featured: [
+          {
+            title: t("new_arrivals"),
+            href: "/shop/new-arrivals",
+            image: "/api/placeholder/300/200",
+            description: "Discover our latest collections and trending items",
+          },
+          {
+            title: t("best_sellers"),
+            href: "/shop/best-sellers",
+            image: "/api/placeholder/300/200",
+            description: "Shop our most popular products",
+          },
+        ],
+        items: [
+          { title: t("new_arrivals"), href: "/shop/new-arrivals" },
+          { title: t("best_sellers"), href: "/shop/best-sellers" },
+          { title: t("sale"), href: "/shop/sale" },
+          { title: t("all_products"), href: "/shop/all" },
+        ],
+      },
     },
     {
       title: t("categories"),
-      description: t("browse_categories"),
-      featured: [
-        {
-          title: t("electronics"),
-          href: "/category/electronics",
-          image: "/api/placeholder/300/200",
-          description: "Latest gadgets and technology",
-        },
-        {
-          title: t("clothing"),
-          href: "/category/clothing",
-          image: "/api/placeholder/300/200",
-          description: "Fashion for every style",
-        },
-      ],
-      items: [
-        { title: t("electronics"), href: "/category/electronics" },
-        { title: t("clothing"), href: "/category/clothing" },
-        { title: t("home_garden"), href: "/category/home-garden" },
-        { title: t("books"), href: "/category/books" },
-      ],
+      href: "/shop", // Direct link to shop page
+      megaMenu: {
+        description: t("browse_categories"),
+        featured: [
+          {
+            title: t("electronics"),
+            href: "/shop/electronics",
+            image: "/api/placeholder/300/200",
+            description: "Latest gadgets and technology",
+          },
+          {
+            title: t("clothing"),
+            href: "/shop/clothing",
+            image: "/api/placeholder/300/200",
+            description: "Fashion for every style",
+          },
+        ],
+        items: [
+          { title: t("electronics"), href: "/shop/electronics" },
+          { title: t("clothing"), href: "/shop/clothing" },
+          { title: t("home_garden"), href: "/shop/home-garden" },
+          { title: t("books"), href: "/shop/books" },
+        ],
+      },
     },
     { title: t("about"), href: "/about" },
     { title: t("contact"), href: "/contact" },
@@ -97,6 +108,17 @@ function EcommerceHeader() {
   const searchVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0 },
+  };
+
+  const handleNavigationClick = (item, e) => {
+    if (item.megaMenu) {
+      // If it has a megaMenu, let the default link behavior work
+      // This means clicking the main nav item goes to the page
+      return;
+    }
+    // For items without megaMenu, navigate directly
+    e.preventDefault();
+    router.push(item.href);
   };
 
   return (
@@ -116,24 +138,22 @@ function EcommerceHeader() {
             <nav className="flex flex-col gap-4 mt-4">
               {navigationItems.map((item) => (
                 <div key={item.title} className="space-y-2">
-                  {item.href ? (
-                    <Link href={item.href} className="text-lg font-medium">
-                      {item.title}
-                    </Link>
-                  ) : (
-                    <>
-                      <div className="text-lg font-medium">{item.title}</div>
-                      <div className="ml-4 space-y-1">
-                        {item.items?.map((subItem) => (
-                          <Link
-                            key={subItem.title}
-                            href={subItem.href}
-                            className="block text-sm text-muted-foreground hover:text-primary">
-                            {subItem.title}
-                          </Link>
-                        ))}
-                      </div>
-                    </>
+                  <Link
+                    href={item.href}
+                    className="text-lg font-medium hover:text-primary transition-colors">
+                    {item.title}
+                  </Link>
+                  {item.megaMenu && (
+                    <div className="ml-4 space-y-1">
+                      {item.megaMenu.items?.map((subItem) => (
+                        <Link
+                          key={subItem.title}
+                          href={subItem.href}
+                          className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+                          {subItem.title}
+                        </Link>
+                      ))}
+                    </div>
                   )}
                 </div>
               ))}
@@ -147,26 +167,26 @@ function EcommerceHeader() {
             <NavigationMenuList>
               {navigationItems.map((item) => (
                 <NavigationMenuItem key={item.title}>
-                  {item.href ? (
-                    <Link href={item.href} legacyBehavior passHref>
-                      <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                        {item.title}
-                      </NavigationMenuLink>
-                    </Link>
-                  ) : (
+                  {item.megaMenu ? (
                     <>
-                      <NavigationMenuTrigger>
-                        {item.title}
-                      </NavigationMenuTrigger>
+                      <Link
+                        href={item.href}
+                        legacyBehavior
+                        passHref
+                        onClick={(e) => handleNavigationClick(item, e)}>
+                        <NavigationMenuTrigger>
+                          {item.title}
+                        </NavigationMenuTrigger>
+                      </Link>
                       <NavigationMenuContent>
                         <div className="w-[900px] p-6">
                           <div className="grid grid-cols-2 gap-8">
                             <div className="space-y-4">
                               <h4 className="text-lg font-medium">
-                                {item.description}
+                                {item.megaMenu.description}
                               </h4>
                               <div className="grid grid-cols-2 gap-4">
-                                {item.items?.map((subItem) => (
+                                {item.megaMenu.items?.map((subItem) => (
                                   <Link
                                     key={subItem.title}
                                     href={subItem.href}
@@ -179,7 +199,7 @@ function EcommerceHeader() {
                               </div>
                             </div>
                             <div className="grid grid-cols-2 gap-4">
-                              {item.featured?.map((feature) => (
+                              {item.megaMenu.featured?.map((feature) => (
                                 <Link
                                   key={feature.title}
                                   href={feature.href}
@@ -206,6 +226,12 @@ function EcommerceHeader() {
                         </div>
                       </NavigationMenuContent>
                     </>
+                  ) : (
+                    <Link href={item.href} legacyBehavior passHref>
+                      <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                        {item.title}
+                      </NavigationMenuLink>
+                    </Link>
                   )}
                 </NavigationMenuItem>
               ))}
@@ -262,9 +288,7 @@ function EcommerceHeader() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-56">
               {isLoading ? (
-                <DropdownMenuItem disabled>
-                  Loading...
-                </DropdownMenuItem>
+                <DropdownMenuItem disabled>Loading...</DropdownMenuItem>
               ) : session ? (
                 <>
                   <DropdownMenuItem className="flex flex-col items-start">
